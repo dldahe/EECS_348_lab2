@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <h1>
+            Password Verification Page
+        </h1>
+    </head>
+
+    <body>
+        <label for="password">Enter a password</label><br>
+        <input type="text" id="password" name="password"><br>
+        <label for="check">Re-enter a password for verification:</label><br>
+        <input type="text" id="check" name="check"><br>
+        <button onclick="verify()">Verify</button>
+        <script>
+            function verify(){
+                let pass = document.getElementById("password").value;
+                let check = document.getElementById("check").value;
+                if (pass === check){
+                    alert("Passwords match!");
+                }
+                else{
+                    alert("Passwords do not match. Try again.");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html> 
+    <head>
+        <style>
+            #content {
+                width: 300px;
+                color: black;
+                white-space: nowrap;
+                border: 2px solid #333;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Update Page</h1>
+        <div id="content">
+        This is the text that will be changed. <br>
+        </div>
+        <br>
+        <label for="user_color">Choose a color:</label><br>
+        <input type="color" id="user_color" name="user_color"><br>
+        <label for="width">Enter the width:</label><br>
+        <input type="number" id="wid" name="wid"><br>
+
+        <button onclick="update()">Apply</button>
+
+        <script>
+            function update(){
+                let color = document.getElementById("user_color").value;
+                let width = document.getElementById("wid").value;
+                let content = document.getElementById("content");
+                content.style.color = color;
+                content.style.borderColor = color;
+                content.style.width = width + "px";
+            }
+        </script>
+    </body>
+</html>
